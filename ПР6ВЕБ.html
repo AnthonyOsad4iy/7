@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Магазин техніки — Практична 6</title>
+  <link rel="stylesheet" href="ПР6ВЕБ.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container header-inner">
+      <h1>Каталог товарів</h1>
+      <div class="cart-badge">
+        Кошик: <span id="cart-count">0</span> шт.
+      </div>
+    </div>
+  </header>
+
+  <main class="container main-layout">
+    <section class="catalog-section">
+      <div class="toolbar">
+        <div class="filters" id="category-filters">
+          <button type="button" class="filter-btn active" data-category="all">Усі</button>
+          <button type="button" class="filter-btn" data-category="Ноутбуки">Ноутбуки</button>
+          <button type="button" class="filter-btn" data-category="Смартфони">Смартфони</button>
+          <button type="button" class="filter-btn" data-category="Аудіо">Аудіо</button>
+          <button type="button" class="filter-btn" data-category="Периферія">Периферія</button>
+          <button type="button" class="filter-btn" data-category="Монітори">Монітори</button>
+        </div>
+
+        <div class="total-warehouse">
+          Загальна вартість товарів: <strong id="total-price">0 грн</strong>
+        </div>
+      </div>
+
+      <div class="products-grid" id="products-list"></div>
+    </section>
+
+    <aside class="sidebar">
+      <div class="box cart-box">
+        <h2>Ваш кошик</h2>
+        <ul class="cart-items" id="cart-list">
+          <li class="empty-msg">Кошик поки порожній</li>
+        </ul>
+        <div class="cart-footer">
+          Сума до сплати: <strong id="cart-total">0 грн</strong>
+        </div>
+      </div>
+
+      <div class="box form-box">
+        <h2>Додати товар</h2>
+        <form id="add-product-form">
+          <label>
+            Назва товару
+            <input type="text" id="prod-name" placeholder="Наприклад: Мишка Razer" required>
+          </label>
+
+          <label>
+            Ціна (грн)
+            <input type="number" id="prod-price" min="1" placeholder="1500" required>
+          </label>
+
+          <label>
+            Категорія
+            <select id="prod-category">
+              <option value="Ноутбуки">Ноутбуки</option>
+              <option value="Смартфони">Смартфони</option>
+              <option value="Аудіо">Аудіо</option>
+              <option value="Периферія">Периферія</option>
+              <option value="Монітори">Монітори</option>
+            </select>
+          </label>
+
+          <label class="checkbox-row">
+            <input type="checkbox" id="prod-stock" checked>
+            Є в наявності
+          </label>
+
+          <button type="submit" class="btn-primary">Додати в каталог</button>
+        </form>
+      </div>
+    </aside>
+  </main>
+
+  <script src="ПР6ВЕБ.js"></script>
+</body>
+</html>
